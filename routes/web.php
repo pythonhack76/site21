@@ -14,5 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home', ['name' => 'Pippo']);
 });
+
+// Route::get('/home', function () {
+//     return 'Hello World';
+// });
+
+Route::resource('studenti', 'App\Http\Controllers\StudentiController');
